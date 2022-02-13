@@ -29,6 +29,10 @@ class GetAddressDetails(Resource):
         address = args['address']
         output_format = args['output_format']
 
+        if not output_format:
+            # making output format default to json if not present in response 
+            output_format = "json"
+
         # if there is no authorisation key then don't allow user to use endpoint
         if not auth:
             return {"message":"unauthorised"},  401
