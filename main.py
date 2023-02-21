@@ -5,7 +5,7 @@ from flask import Flask,make_response
 from flask_restful import reqparse,Api,Resource
 from simplexml import dumps
 
-# creating flask app
+# creating flask application
 app = Flask(__name__)
 
 # creating an API object
